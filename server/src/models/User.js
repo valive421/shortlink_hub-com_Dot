@@ -1,0 +1,3 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({email:{type:String,required:true,unique:true,lowercase:true,trim:true},passwordHash:{type:String,required:true},username:{type:String,required:true,unique:true,lowercase:true,trim:true},emailVerified:{type:Boolean,default:false},avatar:{type:String,default:''},displayName:{type:String,default:''},verificationTokenHash:{type:String,default:null},verificationExpiresAt:{type:Date,default:null},resetTokenHash:{type:String,default:null},resetExpiresAt:{type:Date,default:null}},{timestamps:true});
+export default mongoose.model('User',schema);
