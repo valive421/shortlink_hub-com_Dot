@@ -23,8 +23,7 @@ It combines two common creator/marketing workflows in one application:
 
 The implementation focuses on the assessment's core requirements while keeping the architecture simple enough to run on low-cost/free infrastructure.
 
-> **Assessment basis:** The provided assessment allows either MERN or Python and evaluates requirement understanding, functionality, code quality, architecture, database design, API implementation, UI/UX, technical decisions, and documentation. fileciteturn13file1L24-L42 fileciteturn13file1L201-L214
-
+> **Assessment basis:** The provided assessment allows either MERN or Python and evaluates requirement understanding, functionality, code quality, architecture, database design, API implementation, UI/UX, technical decisions, and documentation. 
 ---
 
 ## 🚀 Live Demo
