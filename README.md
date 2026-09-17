@@ -710,8 +710,7 @@ Do not commit:
 - Refresh tokens
 - Other credentials
 
-The assessment explicitly prohibits committing passwords, API keys, access tokens, database credentials, or other secrets. fileciteturn13file1L106-L117
-
+The assessment explicitly prohibits committing passwords, API keys, access tokens, database credentials, or other secrets. 
 Use `.env.example` for safe placeholders.
 
 ---
@@ -848,8 +847,7 @@ A production version could add:
 - Horizontal API scaling
 - Automated database backups
 
-The assessment also asks candidates to honestly document incomplete areas and explain how they would improve them with additional time. fileciteturn13file1L215-L224
-
+The assessment also asks candidates to honestly document incomplete areas and explain how they would improve them with additional time. 
 ---
 
 # 📋 Assessment Requirement Mapping
@@ -877,9 +875,7 @@ The assessment also asks candidates to honestly document incomplete areas and ex
 | Deployment | Oracle Cloud + Nginx + PM2 |
 | Database hosting | MongoDB Atlas |
 
-The assessment requires the major requirements of the selected project to be implemented, along with a functional frontend/backend, appropriate data storage, APIs/business logic, validation/error handling, and clean project structure. fileciteturn13file1L59-L69
-
----
+The assessment requires the major requirements of the selected project to be implemented, along with a functional frontend/backend, appropriate data storage, APIs/business logic, validation/error handling, and clean project structure. 
 
 # 📚 Documentation
 
@@ -888,9 +884,6 @@ The assessment requires the major requirements of the selected project to be imp
 - **Repository:** https://github.com/valive421/shortlink_hub-com_Dot
 - **Live Application:** http://80.225.223.253
 
-The assessment expects the public repository to contain source code, README/setup instructions, environment requirements, database setup instructions where applicable, and API documentation where applicable. fileciteturn13file1L95-L117
-
----
 
 
 ## 👨‍💻 Project
