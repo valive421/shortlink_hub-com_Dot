@@ -1,2 +1,109 @@
-import {useState} from 'react';import {Link,useLocation,useNavigate} from 'react-router-dom';import {useAuth} from '../store/auth';import {Button} from '../components/ui/button';import {Input} from '../components/ui/input';import {Card,CardContent,CardHeader,CardTitle} from '../components/ui/card';
-export default function Login(){const [form,setForm]=useState({email:'',password:''});const [error,setError]=useState('');const [busy,setBusy]=useState(false);const {login}=useAuth();const nav=useNavigate();const loc=useLocation();const submit=async e=>{e.preventDefault();setError('');setBusy(true);try{await login(form);nav(loc.state?.from||'/dashboard')}catch(e){setError(e.response?.data?.message||'Login failed')}finally{setBusy(false)}};return <div className="grid min-h-screen place-items-center bg-zinc-50 p-4"><Card className="w-full max-w-md"><CardHeader><CardTitle>Welcome back</CardTitle></CardHeader><CardContent><form onSubmit={submit} className="grid gap-4"><Input type="email" placeholder="Email" value={form.email} onChange={e=>setForm({...form,email:e.target.value})} required/><Input type="password" placeholder="Password" value={form.password} onChange={e=>setForm({...form,password:e.target.value})} required/>{error&&<p className="text-sm text-red-600">{error}</p>}<Button disabled={busy}>{busy?'Signing in…':'Sign in'}</Button><div className="flex justify-between text-sm"><Link className="underline" to="/forgot-password">Forgot password?</Link><Link className="underline" to="/signup">Create account</Link></div></form></CardContent></Card></div>}
+import { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '../store/auth';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '../components/ui/card';
+
+export default function Login() {
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+  });
+
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+
+  const { login } = useAuth();
+  const nav = useNavigate();
+  const loc = useLocation();
+
+  const submit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setBusy(true);
+
+    try {
+      await login(form);
+      nav(loc.state?.from || '/dashboard');
+    } catch (e) {
+      setError(
+        e.response?.data?.message || 'Login failed'
+      );
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="grid min-h-screen place-items-center bg-zinc-50 p-4">
+      <Card className="w-full max-w-md">
+        <CardHeader>
+          <CardTitle>Welcome back</CardTitle>
+        </CardHeader>
+
+        <CardContent>
+          <form onSubmit={submit} className="grid gap-4">
+            <Input
+              type="email"
+              placeholder="Email"
+              value={form.email}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  email: e.target.value,
+                })
+              }
+              required
+            />
+
+            <Input
+              type="password"
+              placeholder="Password"
+              value={form.password}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  password: e.target.value,
+                })
+              }
+              required
+            />
+
+            {error && (
+              <p className="text-sm text-red-600">
+                {error}
+              </p>
+            )}
+
+            {/* IMPORTANT: type="submit" */}
+            <Button type="submit" disabled={busy}>
+              {busy ? 'Signing in…' : 'Sign in'}
+            </Button>
+
+            <div className="flex justify-between text-sm">
+              <Link
+                className="underline"
+                to="/forgot-password"
+              >
+                Forgot password?
+              </Link>
+
+              <Link
+                className="underline"
+                to="/signup"
+              >
+                Create account
+              </Link>
+            </div>
+          </form>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
