@@ -456,8 +456,7 @@ The access token is intentionally short-lived. Refresh tokens are stored hashed 
 | `PUT` | `/api/bio/me` | Update bio |
 | `GET` | `/api/bio/:username` | Get public bio |
 
-The assessment specifically expects appropriate API implementation, validation, error handling, and API documentation where applicable. fileciteturn13file1L59-L69 fileciteturn13file1L95-L117
-
+The assessment specifically expects appropriate API implementation, validation, error handling, and API documentation where applicable. 
 ---
 
 # 🧰 Tech Stack
@@ -533,8 +532,7 @@ shortlink_hub-com_Dot/
 - npm 10+
 - MongoDB Atlas account
 
-The assessment permits additional libraries/frameworks and expects the repository to include setup instructions and environment requirements. fileciteturn13file1L93-L117
-
+The assessment permits additional libraries/frameworks and expects the repository to include setup instructions and environment requirements. 
 ## 1. Clone
 
 ```bash
